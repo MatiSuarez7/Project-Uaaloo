@@ -1,0 +1,43 @@
+
+<div class="container mt-4 ">
+  <div class="col-6 mx-auto">
+    <h1 class="text-center">Agregar Cliente</h1>
+  <mdb-card class=" mt-4">
+    <mdb-card-body class="px-lg-5 pt-0">
+
+      <!-- Form -->
+      <form class="text-center" style="color: #757575;" [formGroup]="formCliente" (ngSubmit)="guardarCliente()">
+
+        <div class="form-row">
+          <div class="col">
+            <div class="md-form">
+              <input type="text"  class="form-control" mdbInput formControlName="Nombre">
+              <label>Nombre</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="md-form">
+              <input type="text"  class="form-control" mdbInput formControlName="Apellido">
+              <label>Apellido</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="md-form mt-0">
+          <input type="text" class="form-control" mdbInput formControlName="Direccion">
+          <label>Direccion</label>
+        </div>
+
+        <button mdbBtn color="primary" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect type="submit">Agregar</button>
+
+      </form>
+      <!-- Form -->
+
+    </mdb-card-body>
+  </mdb-card>
+  </div>
+
+</div>
+
