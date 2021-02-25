@@ -14,16 +14,16 @@ const httpOption = {
 })
 export class ClienteService {
 
-  url: string = "http://localhost:5000/clientes";
+  url: string = "http://localhost:5000/clientes/";
 
   constructor(private http: HttpClient) { }
 
-    async getClientes(){
-    return await this.http.get<Cliente[]>(this.url,httpOption).toPromise();
+  getClientes(){
+    return this.http.get<Cliente[]>(this.url,httpOption);
 
   }
 
-  async postClientes(nombre: string, apellido: string, direccion: string){
-    return await this.http.post(`${this.url}/create/${nombre}/${apellido}/${direccion}`,httpOption).toPromise();
+  postClientes(cliente:Cliente){
+    return  this.http.post(`${this.url}`,cliente,httpOption);
   }
 }

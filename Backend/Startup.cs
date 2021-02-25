@@ -45,6 +45,7 @@ namespace Uaaloo
                                     });
             });
             
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
                     
         }

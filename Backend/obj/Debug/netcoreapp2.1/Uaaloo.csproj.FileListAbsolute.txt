@@ -26,3 +26,6 @@ C:\Users\Matias\Uaaloo\Backend\obj\Debug\netcoreapp2.1\Uaaloo.AssemblyInfo.cs
 C:\Users\Matias\Uaaloo\Backend\obj\Debug\netcoreapp2.1\Uaaloo.RazorTargetAssemblyInfo.cache
 C:\Users\Matias\Uaaloo\Backend\obj\Debug\netcoreapp2.1\Uaaloo.dll
 C:\Users\Matias\Uaaloo\Backend\obj\Debug\netcoreapp2.1\Uaaloo.pdb
+C:\Users\Matias\Uaaloo\Backend\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Matias\Uaaloo\Backend\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Matias\Uaaloo\Backend\obj\Debug\netcoreapp2.1\Uaaloo.genruntimeconfig.cache

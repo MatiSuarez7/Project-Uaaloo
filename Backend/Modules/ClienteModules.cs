@@ -10,25 +10,24 @@ namespace Uaaloo.Controllers
     public class ClienteModules : Nancy.NancyModule
     {
         public static int nClienteId = 1;
+        
         public ClienteModules(IClienteService clienteService) : base("/Clientes")
         {
+
             Get("/", _ => clienteService.listar() );
-            Post("/create/{N}/{A}/{D}", args =>
+            Post("/", args =>
             {
                 var model = this.Bind<Cliente>();
                 model.Id=nClienteId++;
-                model.Apellido=args.A;
-                model.Nombre=args.N;
-                model.Direccion=args.D;
                 clienteService.agregar(model);
                 return HttpStatusCode.OK;
             });
-            Delete("/delete/{id}", args =>
+            Delete("/{id}", args =>
             {
                 clienteService.eliminar(args.id);
                 return HttpStatusCode.OK;
             });
-            Put("/edit/{id}/{N}/{A}/{D}", args =>
+            Put("/{id}/{N}/{A}/{D}", args =>
             {
                 int clienteId = args.id;
                 Cliente cliente = clienteService.editar(clienteId);

@@ -17,10 +17,9 @@ export class ListClienteComponent implements OnInit {
     this.obtenerCliente();
   }
 
-  obtenerCliente(){
-    this.clienteService.getClientes().then((res) => {
+  async obtenerCliente(){
+    await this.clienteService.getClientes().subscribe(res => {
       this.clientes = res;
-
     });
   }
 }

@@ -33,16 +33,15 @@ export class FormClienteComponent implements OnInit {
     });
   }
 
-  guardarCliente(){
+    async guardarCliente(){
     const cliente: Cliente = this.formCliente.value;
     this.nombreCliente = cliente.Nombre;
     this.apellidoCliente = cliente.Apellido;
     this.direccionCliente = cliente.Direccion;
 
-    this.clienteService.postClientes(this.nombreCliente,this.apellidoCliente,this.direccionCliente).then( res => {
+    await this.clienteService.postClientes(cliente).subscribe( res => {
       this.router.navigate(['/list']);
     })
-
   }
 
 }
