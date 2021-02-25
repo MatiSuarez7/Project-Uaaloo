@@ -13,9 +13,6 @@ import { ClienteService } from 'src/app/Services/cliente.service';
 export class FormClienteComponent implements OnInit {
 
   formCliente: FormGroup;
-  nombreCliente="";
-  apellidoCliente="";
-  direccionCliente="";
 
   constructor(private formBuilder: FormBuilder, private clienteService: ClienteService, private router: Router) {
     this.formValidaciones();
@@ -35,10 +32,6 @@ export class FormClienteComponent implements OnInit {
 
     async guardarCliente(){
     const cliente: Cliente = this.formCliente.value;
-    this.nombreCliente = cliente.Nombre;
-    this.apellidoCliente = cliente.Apellido;
-    this.direccionCliente = cliente.Direccion;
-
     await this.clienteService.postClientes(cliente).subscribe( res => {
       this.router.navigate(['/list']);
     })
