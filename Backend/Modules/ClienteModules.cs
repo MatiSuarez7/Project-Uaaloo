@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Nancy;
 using Nancy.ModelBinding;
@@ -10,6 +11,7 @@ namespace Uaaloo.Controllers
     public class ClienteModules : Nancy.NancyModule
     {
         public static int nClienteId = 1;
+        
         
         public ClienteModules(IClienteService clienteService) : base("/Clientes")
         {
